@@ -1,47 +1,16 @@
-<!DOCTYPE html>
+<!DOCTYPE html>                                        
 <html>
-  <head>
-    <link rel="stylesheet" href="/static/styles.css">
-    <!-- Include image-compressor.js library -->
-    <script src="https://unpkg.com/image-compressor@1.0.0/dist/image-compressor.umd.js"></script>
-  </head>
-  <body>
-    <h1>Image Compressor</h1>
-    
-    <!-- Input for choosing a file -->
-    <input type="file" id="fileInput" accept="image/*">
-    
-    <!-- Button to trigger compression and download -->
-    <button onclick="compressAndDownload()">Compress and Download</button>
+  <head>                                                   
+	  <link rel="stylesheet" href="/static/styles.css">     </head>                                                
+  <body>                                                   
+            <input type="file" name="image" accept="image/*">       <input type="submit" value="Compress Image">            <button class="compressButton" type="button" onclick="compressImage()">Compress</button>                      
+    </form>
 
-    <!-- JavaScript function definition -->
+    <!-- JavaScript function definition (if needed) -->
     <script>
-      function compressAndDownload() {
-        const input = document.getElementById('fileInput');
-
-        if (input.files.length > 0) {
-          const image = input.files[0];
-          const options = {
-            quality: 0.6, // Adjust compression quality as needed
-          };
-
-          const compressor = new ImageCompressor();
-          compressor.compress(image, options)
-            .then((compressedBlob) => {
-              // Create a download link for the compressed image
-              const downloadLink = document.createElement('a');
-              downloadLink.href = URL.createObjectURL(compressedBlob);
-              downloadLink.download = 'compressed-image.jpg';
-              downloadLink.click();
-            })
-            .catch((error) => {
-              console.error(error.message);
-            });
-        } else {
-          console.error('No image selected');
-        }
+      function compressImage() {
+        // Your compression logic goes here
       }
     </script>
   </body>
-</html>
-
+</html>i
