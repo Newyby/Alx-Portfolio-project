@@ -11,17 +11,13 @@
     <!-- Input for choosing a file -->
     <input type="file" id="fileInput" accept="image/*">
     
-    <!-- Button to trigger compression -->
-    <button onclick="compressImage()">Compress Image</button>
-    
-    <!-- Display the compressed image -->
-    <img id="compressedImage" style="display: none;">
+    <!-- Button to trigger compression and download -->
+    <button onclick="compressAndDownload()">Compress and Download</button>
 
     <!-- JavaScript function definition -->
     <script>
-      function compressImage() {
+      function compressAndDownload() {
         const input = document.getElementById('fileInput');
-        const compressedImage = document.getElementById('compressedImage');
 
         if (input.files.length > 0) {
           const image = input.files[0];
@@ -32,9 +28,11 @@
           const compressor = new ImageCompressor();
           compressor.compress(image, options)
             .then((compressedBlob) => {
-              const compressedDataURL = URL.createObjectURL(compressedBlob);
-              compressedImage.src = compressedDataURL;
-              compressedImage.style.display = 'block';
+              // Create a download link for the compressed image
+              const downloadLink = document.createElement('a');
+              downloadLink.href = URL.createObjectURL(compressedBlob);
+              downloadLink.download = 'compressed-image.jpg';
+              downloadLink.click();
             })
             .catch((error) => {
               console.error(error.message);
