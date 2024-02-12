@@ -2,25 +2,47 @@
 <html>
   <head>
     <link rel="stylesheet" href="/static/styles.css">
+    <!-- Include image-compressor.js library -->
+    <script src="https://unpkg.com/image-compressor@1.0.0/dist/image-compressor.umd.js"></script>
   </head>
   <body>
     <h1>Image Compressor</h1>
-    <form action="/compress" method="post" enctype="multipart/form-data">
-      <input type="file" name="image" accept="image/*">
-      <input type="submit" value="Compress Image">
-    </form>
+    
+    <!-- Input for choosing a file -->
+    <input type="file" id="fileInput" accept="image/*">
+    
+    <!-- Button to trigger compression -->
+    <button onclick="compressImage()">Compress Image</button>
+    
+    <!-- Display the compressed image -->
+    <img id="compressedImage" style="display: none;">
 
-    <!-- JavaScript function definition (if needed) -->
+    <!-- JavaScript function definition -->
     <script>
-      // You can remove the separate button and handle compression on form submission
-      document.querySelector('form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevents the form from submitting immediately
+      function compressImage() {
+        const input = document.getElementById('fileInput');
+        const compressedImage = document.getElementById('compressedImage');
 
-        // Add your compression logic here if needed before submitting the form
-        // For example, you can call compressImage() here before the form is submitted
+        if (input.files.length > 0) {
+          const image = input.files[0];
+          const options = {
+            quality: 0.6, // Adjust compression quality as needed
+          };
 
-        this.submit(); // Submit the form after compression (if any)
-      });
+          const compressor = new ImageCompressor();
+          compressor.compress(image, options)
+            .then((compressedBlob) => {
+              const compressedDataURL = URL.createObjectURL(compressedBlob);
+              compressedImage.src = compressedDataURL;
+              compressedImage.style.display = 'block';
+            })
+            .catch((error) => {
+              console.error(error.message);
+            });
+        } else {
+          console.error('No image selected');
+        }
+      }
     </script>
   </body>
 </html>
