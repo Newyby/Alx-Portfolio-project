@@ -4,7 +4,7 @@ from io import BytesIO
 
 app = Flask(__name__)                                                                                           @app.route('/')
 def index():
-    return app.send_static_file('second page.html')
+    return app.send_static_file('second.html')
 
 @app.route('/compress', methods=['POST'])
 def compress():
