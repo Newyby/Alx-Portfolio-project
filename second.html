@@ -1,8 +1,22 @@
-<!DOCTYPE html>                                         
+<!DOCTYPE html>
 <html>
-  <head>                                                   
-	  <link rel="stylesheet" href="/static/styles.css">     </head>                                                 
-  <body>                                                   
-	  <h1>Image Compressor</h1>
-    <form action="/compress" method="post" enctype="multipart/form-data">                                            
-	    <input type="file" name="image" accept="image/*">       <input type="submit" value="Compress Image">            <button class="compressButton" onclick="compressImage()">            </form>
+<head>
+    <link rel="stylesheet" href="/static/styles.css"> <!-- Link to external stylesheet -->
+</head>
+<body>
+    <h1>Image Compressor</h1> <!-- Heading -->
+
+    <form action="/compress" method="post" enctype="multipart/form-data"> <!-- Form for uploading and compressing images -->
+        <input type="file" name="image" accept="image/*"> <!-- Input field for selecting an image file -->
+        <input type="submit" value="Compress Image"> <!-- Submit button to initiate image compression -->
+        <button class="compressButton" onclick="compressImage()"> <!-- Button for compressing image (alternative method) -->
+    </form>
+
+    <!-- JavaScript function for compressing image -->
+    <script>
+        function compressImage() {
+            // Add JavaScript code here to compress the image
+        }
+    </script>
+</body>
+</html>

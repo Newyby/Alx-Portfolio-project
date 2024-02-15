@@ -1,38 +1,151 @@
-body {font-family: Arial, sans-serif;                         
-margin: 0;
- padding: 0;                                           
- }
-h1 
-{
-  background-color: #4CAF50;                              
-  color: white;
-  margin: 0;
-  padding: 20px;
+/* Global Styles */
+body {
+	margin: 0; /* Remove default margin */
+	padding: 0; /* Remove default padding */
+	font-family: Arial, sans-serif; /* Set font family */
+	color: #333; /* Set text color */
+	background-color: #f9f9f9; /* Set background color */
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-input[type=file] {
-  margin-bottom: 20px;
+.container {
+	max-width: 960px; /* Set maximum width for content */
+	margin: 0 auto; /* Center content horizontally */
+	padding: 40px; /* Add padding around content */
 }
 
-input[type=submit] {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 12px 20px;
-  text-decoration: none;
-   cursor: pointer;
+a {
+	text-decoration: none; /* Remove default underline from links */
+	color: #333; /* Set link color */
+	transition: color 0.3s ease; /* Smooth color transition on hover */
 }
-compressButton {
-  background-color: #00Ff00;
-  color: Green;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+
+a:hover {
+	color: #777; /* Change link color on hover */
+}
+
+.button {
+	display: inline-block; /* Display button as inline-block element */
+	padding: 10px 20px; /* Add padding to button */
+	background-color: #4dc0b5; /* Set button background color */
+	color: #fff; /* Set button text color */
+	border-radius: 4px; /* Add border radius to button */
+	transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+}
+
+.button:hover {
+	background-color: #6ed09f; /* Change button background color on hover */
+}
+
+.button-container {
+	position: absolute; /* Position button container absolutely */
+	top: 20px; /* Position from the top */
+	right: 20px; /* Position from the right */
+}
+
+/* Header Styles */
+header {
+	position: relative; /* Set header position to relative */
+	background-color: #f2f2f2; /* Set header background color */
+	padding: 20px; /* Add padding to header */
+}
+
+nav ul {
+	list-style: none; /* Remove default list styles */
+	margin: 0; /* Remove default margin */
+	padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+	display: inline; /* Display list items inline */
+	margin-right: 10px; /* Add margin between list items */
+}
+
+nav ul li a {
+	font-weight: bold; /* Set font weight to bold for navigation links */
+}
+
+/* Intro Section Styles */
+#intro {
+	position: relative; /* Set intro section position to relative */
+	background-image: url("cover-image.jpg"); /* Set background image */
+	background-size: cover; /* Cover background with image */
+	background-position: center; /* Center background image */
+	padding: 100px 0; /* Add padding to intro section */
+	border: 2px solid #4dc0b5; /* Add border to intro section */
+	border-radius: 4px; /* Add border radius to intro section */
+	transition: border-color 0.3s ease; /* Smooth border color transition on hover */
+}
+
+#intro:hover {
+	border-color: #6ed09f; /* Change border color on hover */
+}
+
+.intro-dark {
+	color: #fff; /* Set text color to white */
+	text-align: center; /* Center align text */
+}
+
+.intro-dark h1 {
+	font-size: 32px; /* Set font size for heading */
+	margin-bottom: 20px; /* Add margin below heading */
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow */
+}
+
+.intro-dark p {
+	font-size: 18px; /* Set font size for paragraph */
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow */
+}
+
+.intro-dark .button {
+	margin-top: 20px; /* Add margin to button */
+}
+
+/* Feature Section Styles */
+#features {
+	display: flex; /* Display features section as flex container */
+	flex-direction: column; /* Arrange items vertically */
+	align-items: center; /* Center align items */
+	padding: 80px 0; /* Add padding to features section */
+}
+
+.feature {
+	text-align: center; /* Center align feature */
+	margin-bottom: 40px; /* Add margin below feature */
+	padding: 20px; /* Add padding to feature */
+	border: 1px solid #4dc0b5; /* Add border to feature */
+	border-radius: 4px; /* Add border radius to feature */
+	transition: border-color 0.3s ease; /* Smooth border color transition on hover */
+}
+
+.feature:hover {
+	border-color: #6ed09f; /* Change border color on hover */
+}
+
+.feature img {
+	width: 100%; /* Set image width to 100% */
+	height: auto; /* Set image height to auto */
+	margin-bottom: 20px; /* Add margin below image */
+}
+
+.feature h3 {
+	font-size: 24px; /* Set font size for feature title */
+	margin: 20px 0; /* Add margin around feature title */
+	color: #333; /* Set feature title color */
+}
+
+.feature p {
+	font-size: 16px; /* Set font size for feature description */
+	color: #777; /* Set feature description color */
+}
+
+/* About Section Styles */
+#about {
+	padding: 80px 0; /* Add padding to about section */
+}
+
+.container #about {
+	border: 1px solid #4dc0b5; /* Add border to about section */
+	border-radius: 4px; /* Add border radius to about section */
+	padding: 20px; /* Add padding to about section */
+	transition: border-color 0.3s ease; /* Smooth border color transition on hover */
 }
