@@ -145,5 +145,76 @@ nav ul li a {
 
 .container #about {
 	border: 1px solid #4dc0b5; /* Add border to about section */
-	border-radius: 
+	border-radius: 4px; /* Add border radius to about section */
+	padding: 20px; /* Add padding to about section */
+	transition: border-color 0.3s ease; /* Add transition effect for border color */
+}
+
+.container #about:hover {
+	border-color: #6ed09f; /* Change border color on hover */
+}
+
+#about h2 {
+	text-align: center; /* Center text in about section heading */
+	margin-bottom: 40px; /* Add bottom margin to about section heading */
+	color: #333; /* Set text color for about section heading */
+}
+
+#about p {
+	font-size: 18px; /* Set font size for about section paragraphs */
+	color: #777; /* Set text color for about section paragraphs */
+	text-align: justify; /* Justify text in about section paragraphs */
+}
+
+#about ul {
+	list-style: none; /* Remove default list styles */
+	padding: 0; /* Reset padding */
+	margin: 20px 0; /* Add margin to about section list */
+	display: flex; /* Display list items as flex container */
+	justify-content: center; /* Center list items horizontally */
+}
+
+#about li {
+	border: 1px solid #4dc0b5; /* Add border to list items */
+	border-radius: 4px; /* Add border radius to list items */
+	margin: 0 10px; /* Add margin to list items */
+	padding: 10px; /* Add padding to list items */
+	transition: border-color 0.3s ease; /* Add transition effect for border color */
+}
+
+#about li:hover {
+	border-color: #6ed09f; /* Change border color on hover */
+}
+
+#about li a {
+	display: flex; /* Display links as flex container */
+	align-items: center; /* Center link items vertically */
+	color: #333; /* Set text color for links */
+	text-decoration: none; /* Remove underline from links */
+}
+
+#about li a i {
+	margin-right: 10px; /* Add right margin to icon in links */
+}
+
+#about li a:hover {
+	color: #777; /* Change link color on hover */
+}
+
+/* Footer Styles */
+footer {
+	background-color: #333; /* Set background color for footer */
+	padding: 20px; /* Add padding to footer */
+	color: #fff; /* Set text color for footer */
+	text-align: center; /* Center text in footer */
+}
+
+/* Video Style */
+iframe {
+	display: flex; /* Display iframe as flex container */
+	justify-content: center; /* Center iframe horizontally */
+	align-items: center; /* Center iframe vertically */
+	height: 50vh; /* Set height of iframe */
+	margin: 0; /* Reset margin for iframe */
+}
 
