@@ -4,7 +4,7 @@ INTRODUCTION: The Image Compressor project is a web application designed to comp
 
 [Alx Portfolio project github](https://github.com/Newyby/Alx-Portfolio-project.git)
 
-[Image compression website landing page](https://newyby.github.io/Alx-test-project/)
+[Image compression website landing page](https://newyby.github.io/Alx-Portfolio-project)
 
 [Image compression website Demo](http://127.0.0.1:5000)     
 
