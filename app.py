@@ -19,4 +19,3 @@ def compress():
 
 if __name__ == '__main__':
     app.run()  # Entry point to run the Flask application
-
